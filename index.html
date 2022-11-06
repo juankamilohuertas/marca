@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 100vh; background-color: #aaa; display:flex; flex-direction: column; justify-content: center; align-items:center">
+    <style>
+        .contenedor{
+            display: flex;
+            background-color: brown;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 50px;
+            width: 100%;
+        }
+        .contenedor b{
+            color: #ffffff;
+        }
+    </style>
+    <div class="contenedor" id="contenedor"></div>
+    <p>Escribe la Palabra</p>
+    <input type="text">
+    <script>
+        let palabras = [
+            "<b>Tetza</b>",
+            "<b>Tedsa</b>",
+            "<b>Tedza</b>"
+        ]
+        setInterval(()=>{
+            for (let index = 0; index < palabras.length; index++) {
+                let numero = Math.floor(Math.random()*3);
+                    document.getElementById("contenedor").innerHTML=palabras[numero];
+            }
+        },300);
+    </script>
+</body>
+</html>
